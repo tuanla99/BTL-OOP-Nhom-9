@@ -1,0 +1,43 @@
+.addSP{
+    font-family: segoe ui;
+    font-size: 20px;
+    text-align: center;
+    height: 500px;
+    width: 1320px;
+}
+.addSP .addSP_form{
+    height: 150px; width: 1320px;
+    display: flex;
+    flex-wrap: wrap;   
+     justify-content: center;
+}
+.addSP  .add_form_text{
+    height: 20px;
+    
+}
+.addSP .addSP_form .addSP_form_input{
+    padding-top: 30px;
+    height: 100px;
+    width: 400px;
+}
+.addSP .addSP_form .addSP_form_input > p{
+    height: 30px;
+    width: 150px;
+    margin: auto;
+}
+.addSP .addSP_form .addSP_form_input >input{
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
+
+}
+::placeholder { 
+    font-family: segoe ui;
+    font-size: 20px;
+    text-align: center;
+  }
+  input[type=text]{
+    font-family: segoe ui;
+    font-size: 15px;
+    text-align: center;
+  }

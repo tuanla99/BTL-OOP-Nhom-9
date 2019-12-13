@@ -1,0 +1,302 @@
+@startuml
+
+title __CONTROLLER's Class Diagram__\n
+
+  namespace  {
+    namespace ontroller {
+      class controller.AddDeviceServlet {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.AddEmployeesServlet {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.AddProduct {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.DeleteCustomer {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.DeleteDeviceServlet {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.DeleteEmployeesServlet {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.DeleteProduct {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.DonBhAdd {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.DonBhDelete {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.DonBhEdit {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.DonBhList {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.DonBhSearch {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.EditCustomer {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.EditDeviceServlet {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.EditEmployeesServlet {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.EditProduct {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.ListCustomer {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.ListDeviceServlet {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.ListEmployeesServlet {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.ListProduct {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.LoginController {
+          {static} - serialVersionUID : long
+          + LoginController()
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.SearchCustomer {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.SearchDeviceByTenLKServlet {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.SearchEmployeesServlet {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.SearchProduct {
+          # doGet()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ontroller {
+      class controller.ThongKeController {
+          # doGet()
+          # doPost()
+      }
+    }
+  }
+  
+
+  controller.AddDeviceServlet -up-|> javax.servlet.http.HttpServlet
+  controller.AddEmployeesServlet -up-|> javax.servlet.http.HttpServlet
+  controller.AddProduct -up-|> javax.servlet.http.HttpServlet
+  controller.AddProduct o-- services.CustomerService : customerService
+  controller.AddProduct o-- services.ProductService : productService
+  controller.DeleteCustomer -up-|> javax.servlet.http.HttpServlet
+  controller.DeleteCustomer o-- services.CustomerService : customerService
+  controller.DeleteDeviceServlet -up-|> javax.servlet.http.HttpServlet
+  controller.DeleteEmployeesServlet -up-|> javax.servlet.http.HttpServlet
+  controller.DeleteProduct -up-|> javax.servlet.http.HttpServlet
+  controller.DonBhAdd -up-|> javax.servlet.http.HttpServlet
+  controller.DonBhAdd o-- services.DonBhService : dao
+  controller.DonBhDelete -up-|> javax.servlet.http.HttpServlet
+  controller.DonBhDelete o-- services.DonBhService : dao
+  controller.DonBhEdit -up-|> javax.servlet.http.HttpServlet
+  controller.DonBhEdit o-- services.DonBhService : dao
+  controller.DonBhList -up-|> javax.servlet.http.HttpServlet
+  controller.DonBhList o-- model.DAO.DonBhDAOImpl : dao
+  controller.DonBhSearch -up-|> javax.servlet.http.HttpServlet
+  controller.EditCustomer -up-|> javax.servlet.http.HttpServlet
+  controller.EditDeviceServlet -up-|> javax.servlet.http.HttpServlet
+  controller.EditEmployeesServlet -up-|> javax.servlet.http.HttpServlet
+  controller.EditProduct -up-|> javax.servlet.http.HttpServlet
+  controller.ListCustomer -up-|> javax.servlet.http.HttpServlet
+  controller.ListCustomer o-- services.CustomerService : customerService
+  controller.ListDeviceServlet -up-|> javax.servlet.http.HttpServlet
+  controller.ListDeviceServlet o-- services.DeviceService : deviceService
+  controller.ListEmployeesServlet -up-|> javax.servlet.http.HttpServlet
+  controller.ListEmployeesServlet o-- services.EmployeesService : employeesService
+  controller.ListProduct -up-|> javax.servlet.http.HttpServlet
+  controller.ListProduct o-- services.ProductService : productService
+  controller.LoginController -up-|> javax.servlet.http.HttpServlet
+  controller.SearchCustomer -up-|> javax.servlet.http.HttpServlet
+  controller.SearchCustomer o-- services.CustomerService : customerService
+  controller.SearchDeviceByTenLKServlet -up-|> javax.servlet.http.HttpServlet
+  controller.SearchEmployeesServlet -up-|> javax.servlet.http.HttpServlet
+  controller.SearchProduct -up-|> javax.servlet.http.HttpServlet
+  controller.SearchProduct o-- services.ProductService : productService
+  controller.ThongKeController -up-|> javax.servlet.http.HttpServlet
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
